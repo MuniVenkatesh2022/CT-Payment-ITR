@@ -1,5 +1,6 @@
 package com.cpt.payments.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +12,11 @@ public class PaymentTestController {
 	@GetMapping("/payment")
 	public String getPayment() {
 		return "Payment working";
+	}
+	
+	@GetMapping("/getHello")
+	public ResponseEntity<?> helloWorld(){
+		return ResponseEntity.ok().body("hello world");
 	}
 
 }
